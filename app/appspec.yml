@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ec2-user/app
+
+hooks:
+  ApplicationStop:
+    - location: stop-app
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStart:
+    - location: start-app
+      timeout: 300
+      runas: ec2-user
