@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /home/ec2-user/app
+cd /var/www/velosmithnodeapp
 npm install
 pm2 start app.js || pm2 restart app
